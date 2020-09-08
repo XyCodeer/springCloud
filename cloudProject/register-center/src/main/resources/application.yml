@@ -1,0 +1,16 @@
+# 注册中心启动端口
+server:
+  port: 8761
+eureka:
+  server:
+    # 是否关闭自我保护机制
+    enable-self-preservation: false
+    # 设置清理间隔时间单位毫秒, 心跳检测客户端的时间间隔
+    eviction-interval-timer-in-ms: 3000
+  instance:
+    hostname: 127.0.0.1
+client:
+    registerWithEureka: false #不把自己作为一个客户端注册到自己身上
+    fetchRegistry: false  #不需要从服务端获取注册信息（因为在这里自己就是服务端，而且已经禁用自己注册了）
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
