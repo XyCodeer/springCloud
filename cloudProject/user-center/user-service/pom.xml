@@ -32,7 +32,6 @@
 
     </dependencies>
 
-
     <build>
         <finalName>user-service</finalName>
         <pluginManagement>

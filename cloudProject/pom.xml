@@ -22,6 +22,7 @@
         <module>ribbon-center</module>
         <module>gateway-zuul</module>
         <module>config-center</module>
+        <module>product-service</module>
     </modules>
 
     <properties>
